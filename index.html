@@ -2,12 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>weather-site</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <title>My Weather Site</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <h1>Weather</h1>
+      <p>See the 7 day weather forcast in London.</p>
+    </header>
+    <main>
+      <div id="weather"></div>
+    </main>
+
+    <div id="error"></div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
