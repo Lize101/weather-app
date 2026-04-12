@@ -1,8 +1,9 @@
 // Variables
 const weather = document.getElementById('weather');
 const err = document.getElementById('error');
+const header = document.getElementById('header');
 const apiKey = import.meta.env.VITE_API_KEY;
-const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=7`;
+const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=7`;
 
 //Fetch and return API data
 let fetchWeather = async () => {
@@ -16,7 +17,7 @@ let displayWeather = (result) => {
     const locationName = document.createElement('h2');
     locationName.textContent = result.location.name;
 
-    weather.appendChild(locationName);
+    header.appendChild(locationName);
 
     result.forecast.forecastday.forEach(day => {
 
@@ -24,7 +25,15 @@ let displayWeather = (result) => {
         div.className = 'card';
 
         const para0 = document.createElement('p');
-        para0.textContent = day.date;
+        para0.className = 'paraDate';
+        const dateObj = new Date(day.date);
+        const formatDate = dateObj.toLocaleDateString('en-GB', {
+            weekday: 'short',
+            day: 'numeric',
+            month: 'short',
+            // year: 'numeric'
+        })
+        para0.textContent = formatDate;
 
         const img = document.createElement('img');
         img.src = day.day.condition.icon;

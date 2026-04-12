@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
     <title>My Weather Site</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <h1>Weather</h1>
-      <p>See the 7 day weather forecast in London.</p>
+      <p>The 7 day weather forecast</p>
     </header>
-    <main>
+    <main id="main">
       <div id="weather"></div>
     </main>
 
     <div id="error"></div>
+
+    <footer>
+      <p>Powered by <a href="https://www.weatherapi.com" target="_blank">WeatherAPI.com</a></p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
