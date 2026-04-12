@@ -19,3 +19,6 @@ A 7 day London weather forecast application, that displays live data fetched fro
 2. Run `npm install`
 3. Add your API key to .env file as `VITE_API_KEY=yourkey`
 4. Run `npm run dev`
+
+## Live site:
+[London Weather](https://weather-app-london.vercel.app/)
